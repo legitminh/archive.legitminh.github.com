@@ -17,8 +17,11 @@ export default function f(){
                 </h1>
             </center>
             <PageMargin>
-                <video className=" w-max" muted controls autoPlay src="/videos/avatar.mp4">
-                </video>
+                <p className=" text-c00">
+                    nothing to see here. Campaign Credit: Aswin K
+                </p>
+                {/* <video className=" w-max" muted controls autoPlay src="/videos/avatar.mp4">
+                </video> */}
             </PageMargin>
             </div>
         </ThemeWrapper>

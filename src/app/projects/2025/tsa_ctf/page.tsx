@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/app/components/Nav/Navbar"
 // import ThemeWrapper from "@/app/components/ThemeWrapper"
 // import Text from "@/app/components/Text/Text"
@@ -6,25 +7,32 @@ import Navbar from "@/app/components/Nav/Navbar"
 import Head from "next/head"
 import PageMargin from "@/app/components/PageMargin"
 export default function f(){
+    function verify(){
+        alert("HI")
+    }
+    (window as any).verify = verify; // temporarily expose for testing
     return(
         <>
             <Head>
-                <title>NET ZERO HERO</title>
+                <title>TSA CTF</title>
             </Head>
             <Navbar></Navbar>
             <div className={ " bg-transparent h-max mt-[2rem]"}>
 
             <center>
                 <h1 className=" text-6xl content-center text-c00 w-full">
-                    NET ZERO HERO
+                    TSA CTF
                 </h1>
             </center>
             <PageMargin>
-                <video muted controls className=" w-max" autoPlay src="/videos/NetZeroHero.mp4">
-                </video>
                 <p className=" text-c40">
-                    An unpolished game I did in a few hours for Hackgwinnett gamejam. The polished game will be released in 2024.
+                    date: 2026.1.17
+                    <br></br>
+                    Hi competitor, log in if you dare
                 </p>
+                <button onClick={verify}>
+                    Hi
+                </button>
             </PageMargin>
             </div>
         </>

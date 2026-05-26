@@ -7,6 +7,7 @@ export default function f(){
             <div className=" m-7 left-6 text-c00">
             Sample file
             Hello World
+            Campaign Credit: Aswin K
             </div>
         </ThemeWrapper>
         

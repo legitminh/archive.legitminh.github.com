@@ -38,10 +38,13 @@ export default function Navbar() {
       ]
     },
       {n:"PROJECTS", l:"/projects", c:[
+        {n: "2025", l:"/projects#2025", c:[
+          // {n:"TSA CTF", l:"/projects/2025/tsa_ctf"},
+        ]},
         {n: "2024", l:"/projects#2023" ,c: [
           {n:"PEP WEBSITE", l:"/projects/2024/pepWebsite"},
           {n:"AUDIOPLAYER", l:"/projects/2024/audioPlayer"},
-          {n:"ASTROFEST_1", l: "/projects/2024/astroFest1"}
+          {n:"ASTROFEST_1", l: "/projects/2024/astroFest1"},
         ]
         },
         {n: "2023", l:"/projects#2023"
