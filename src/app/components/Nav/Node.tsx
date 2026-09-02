@@ -19,7 +19,8 @@ export default function Node(props : {
     // console.log(props.path);
     // console.log(activePath.slice(0,props.path.length));
 
-    const color = (props.path.toString() === activePath.slice(0,props.path.length).toString())?" text-cblue80":" text-c00"; //if part of the path
+    const safeActivePath = Array.isArray(activePath) ? activePath : [];
+    const color = (props.path.toString() === safeActivePath.slice(0,props.path.length).toString())?" text-cblue80":" text-c00"; //if part of the path
 
     const nodeRender = (
         // Node outline px-[2rem] py-[0.5rem]

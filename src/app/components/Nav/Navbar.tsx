@@ -96,28 +96,34 @@ export default function Navbar() {
     // console.log(urlPath);
     function dfs(node:any, curPath:number[]){
       if ((node.l) === urlPath){
-        return curPath
+        return curPath;
       }
       if (node.c){ //if have children
         for (let i = 0; i < node.c.length; i++){
           const childResult : any = dfs(node.c[i], curPath.concat(i));
-          if (childResult != false){
+          if (childResult !== false){
             return childResult;
           }
         }
       }
       return false;
     }
-    
-    return dfs(map.c[0], [0]); //start at home
+
+    const result = dfs(map.c[0], [0]); //start at home
+    // Ensure we always return an array so callers can safely use array methods like concat/length
+    if (result === false || !Array.isArray(result)) return [0];
+    return result;
   }
   const path = getPath();
   function getChildren(){ //get childrenNodes of the current absolute file path
     let curNode = map;
-    for (let i = 0; i < path.length; i++){
-      curNode = curNode.c[path[i]];
+    // defensive: ensure path is an array
+    const safePath = Array.isArray(path) ? path : [0];
+    for (let i = 0; i < safePath.length; i++){
+      if (!curNode || !curNode.c) return undefined;
+      curNode = curNode.c[safePath[i]];
     }
-    return curNode.c;
+    return curNode ? curNode.c : undefined;
   }
   function renderChildren(){
     // console.log(getPath());
