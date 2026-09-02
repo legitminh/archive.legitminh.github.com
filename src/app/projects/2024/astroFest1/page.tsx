@@ -15,7 +15,7 @@ export default function f(){
                 </h1>
             </center>
             <div className=" ml-[8rem] mr-[8rem]">
-                <video muted controls className=" w-max" autoPlay src="/videos/Astrofest1.mp4"></video>
+                <video muted controls className=" w-max" autoPlay src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/videos/Astrofest1.mp4`}></video>
                 <FileSection title="How To Play">
                     <div className=" ml-[1rem]">    
                     <Text>

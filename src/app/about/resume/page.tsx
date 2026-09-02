@@ -18,7 +18,7 @@ export default function Resume() {
             </center>
             <PageMargin>
                 {/* <iframe src="/pdf/Resume2025.pdf" className="w-full h-screen" /> */}
-                <Image src="/images/ResumeCs.png" alt="Resume"  className="w-full h-fit"/>
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/ResumeCs.png`} alt="Resume"  className="w-full h-fit"/>
             </PageMargin>
             </div>
             </ThemeWrapper>

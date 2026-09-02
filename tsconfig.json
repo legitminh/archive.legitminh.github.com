@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
-    "moduleResolution": "node",
     "target": "es6",
     "types": [
       "node"
@@ -35,7 +34,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "moduleResolution": "node"
   },
   "include": [
     "next-env.d.ts",

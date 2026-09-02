@@ -14,7 +14,7 @@ export default function Logo({
   return (
     <div className={`p-2 bg-slate-100 rounded-full ${className}`}>
       <Image
-        src="/logo/minh-icon.svg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo/minh-icon.svg`}
         alt={alt}
         width={size - 8}
         height={size - 8}

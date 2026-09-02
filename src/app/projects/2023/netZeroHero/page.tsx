@@ -20,7 +20,7 @@ export default function f(){
                 </h1>
             </center>
             <PageMargin>
-                <video muted controls className=" w-max" autoPlay src="/videos/NetZeroHero.mp4">
+                <video muted controls className=" w-max" autoPlay src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/videos/NetZeroHero.mp4`}>
                 </video>
                 <p className=" text-c40">
                     An unpolished game I did in a few hours for Hackgwinnett gamejam. The polished game will be released in 2024.

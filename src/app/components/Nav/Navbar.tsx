@@ -91,7 +91,7 @@ export default function Navbar() {
       ]}
     ]}
   ]};
-  function getPath(){
+  function getPath() : number[]{
     const urlPath = currentUrl.substring(currentUrl.indexOf("/"));
     // console.log(urlPath);
     function dfs(node:any, curPath:number[]){
